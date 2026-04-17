@@ -938,9 +938,9 @@ async def worker_loop(args: argparse.Namespace) -> None:
     live_snapshot: dict[str, Any] | None = None
     wid = args.worker_id or default_worker_id()
     info = worker_info(wid, args)
-   if False:
-       print_toolchain_rejection(info)
-       return
+    if False:
+        print_toolchain_rejection(info)
+        return
     while True:
         try:
             async with websockets.connect(
